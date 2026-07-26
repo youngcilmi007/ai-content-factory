@@ -19,17 +19,14 @@ This workflow creates an autonomous content pipeline:
 ---
 
 ## 🧱 Workflow Architecture
-
-```text
-[Notion Idea Board (Status: Ready)] ➔ [Zapier Core Paths] ➔ [AI Agent Adaptation Engine]
 [ GitHub Repository ] 
-       │  (Webhook: Push / New Release / Template File Update)
+       │  (Webhook: New Commit / Push)
        ▼
 [ Zapier Automation Trigger ]
        │
-       ├─► [ Notion Content Hub ] ➔ Creates or Updates Database Properties
-       │
-       └─► [ Google Sheets Master Log ] ➔ Inserts/Updates Rows (Content Title, Platform, Status, Link)
+       ▼
+[ Google Sheets ("fc lion") ] ➔ Inserts/Updates Rows (Commit Ref, Content Title, Status, Asset URL)
+
                                                                         │
          ┌──────────────────────────────────────────────────────────────┘
          ▼
