@@ -23,8 +23,22 @@ This document outlines the exact field mappings, step configurations, and webhoo
   * `X Thread` ➔ Map to AI JSON response key `twitter_thread`
   * `Newsletter Abstract` ➔ Map to AI JSON response key `newsletter_abstract`
   * `Status` ➔ Update to `Draft Generated`
+ 
+### 🔌 Trigger Step: GitHub — New Commit or Push
+- **Event:** `New Commit`
+- **Repository:** `youngcilmi007/ai-content-factory`
+- **Branch:** `main`
+- **Purpose:** Automatically captures code updates, prompt additions, or schema changes to kick off the automation chain.
 
-### Action 3: Google Sheets — `Create Spreadsheet Row`
+### 🔄 Action Step 1: Notion Content Hub
+- **Action:** Create or Update Database Item
+- **Database:** `Content Hub`
+- **Mapping:** Maps GitHub commit titles and file additions to page properties.
+
+### 📊 Action Step 2: Google Sheets Master Log
+- **Action:** Create Spreadsheet Row
+- **Sheet:** `AI Content Master Log`
+- **Mapping:** Records the Commit Reference, Content Title, Platforms, Status, and GitHub Asset URL.### Action 3: Google Sheets — `Create Spreadsheet Row`
 * **Spreadsheet:** `Master Content Calendar`
 * **Row Mappings:**
   * `Content Title` ➔ Notion Page Title
