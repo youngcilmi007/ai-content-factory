@@ -21,6 +21,11 @@ The Notion workspace serves as the primary dashboard where content ideas are dra
 
 ## 📊 2. Google Sheets Master Content Calendar Schema
 The Google Sheet acts as the overarching publication schedule and performance metrics log.
+Column HeaderData TypeSource / GitHub Integration MappingCommit ReferenceTextPulls the latest commit hash or file name from ai-content-factoryContent TitleTextNotion Database Page Title or Markdown HeadingPlatforms TargetedTextLinkedIn, X, NewsletterGeneration DateDateTimeTimestamp of Zapier automation executionStatusSelectSynced, Scheduled, or PublishedGitHub Asset URLURLDirect link to files in the repository (e.g., prompts and schemas)
+
+
+
+
 
 | Column Letter | Column Header | Data Type | Description |
 | :--- | :--- | :--- | :--- |
